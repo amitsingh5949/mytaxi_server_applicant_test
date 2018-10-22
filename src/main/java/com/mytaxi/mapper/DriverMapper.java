@@ -1,4 +1,4 @@
-package com.mytaxi.controller.mapper;
+package com.mytaxi.mapper;
 
 import com.mytaxi.datatransferobject.DriverDTO;
 import com.mytaxi.domainobject.DriverDO;

@@ -4,9 +4,14 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.mytaxi.domainvalue.GeoCoordinate;
+import lombok.Builder;
+import lombok.Setter;
+
 import javax.validation.constraints.NotNull;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
+@Setter
+@Builder
 public class DriverDTO
 {
     @JsonIgnore
@@ -21,7 +26,7 @@ public class DriverDTO
     private GeoCoordinate coordinate;
 
 
-    private DriverDTO()
+    public DriverDTO()
     {
     }
 

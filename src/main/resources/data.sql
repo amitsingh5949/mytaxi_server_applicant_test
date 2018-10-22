@@ -40,3 +40,35 @@ values
  (8,
  'aced0005737200226f72672e737072696e676672616d65776f726b2e646174612e67656f2e506f696e7431b9e90ef11a4006020002440001784400017978704023000000000000404bfa1cac083127', now(), now(), false, 'ONLINE',
 'driver08pw', 'driver08');
+
+
+-- Create 3 manufacturers
+insert into manufacturer (manufacturer_id, date_created, name, location, contact_email) values (1, now(), 'audi', 'berlin', 'audi.berlin@support.audi.com');
+
+insert into manufacturer (manufacturer_id, date_created, name, location, contact_email) values (2, now(), 'bmw', 'frankfurt', 'bmw.frankfurt@support.bmw.com');
+
+insert into manufacturer (manufacturer_id, date_created, name, location, contact_email) values (3, now(), 'honda', 'hamburg', 'honda.hamburg@support.hamburg.com');
+
+-- create 6 Cars
+
+insert into cars (car_id, date_created, deleted, license_plate, seat_count, convertible, rating, engine_type, km_driven, top_speed, manufacturer_id) values(1, now(), false, 'ERH8500', 4, true, 4.5, 'ELECTRIC',
+ 140000, 120, 1);
+
+insert into cars (car_id, date_created, deleted,  license_plate, seat_count, convertible, rating, engine_type, km_driven, top_speed, manufacturer_id) values(2, now(), false,'ERH8501', 2, false, 5,   'GAS',
+  40030,  130, 1);
+
+insert into cars (car_id, date_created, deleted,  license_plate, seat_count, convertible, rating, engine_type, km_driven, top_speed, manufacturer_id) values(3, now(), false, 'ERH8502', 6, true, 3.5, 'ELECTRIC',
+ 310000, 120, 3);
+
+insert into cars (car_id, date_created, deleted,  license_plate, seat_count, convertible, rating, engine_type, km_driven, top_speed, manufacturer_id) values(4, now(), false,'ERH8503', 4, false, 4.5, 'ELECTRIC',
+ 110000, 110, 2);
+
+insert into cars (car_id, date_created, deleted,  license_plate, seat_count, convertible, rating, engine_type, km_driven, top_speed, manufacturer_id) values(5, now(), false, 'ERH8504', 6, true, 2.5, 'GAS',
+ 50000,  100, 3);
+
+insert into cars (car_id, date_created, deleted,  license_plate, seat_count, convertible, rating, engine_type, km_driven, top_speed, manufacturer_id) values(6, now(), false, 'ERH8505', 4, true, 4.5, 'ELECTRIC',
+ 80000,  120, 2);
+
+
+--cretae car driver mapping table
+insert into driver_car_mapping (id, date_created, is_riding, driver_id, car_id) values(1, now(), true, 1, 1);

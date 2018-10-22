@@ -13,6 +13,9 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
 import javax.validation.constraints.NotNull;
+
+import lombok.AllArgsConstructor;
+import org.hibernate.annotations.Where;
 import org.springframework.format.annotation.DateTimeFormat;
 
 @Entity
@@ -20,11 +23,12 @@ import org.springframework.format.annotation.DateTimeFormat;
     name = "driver",
     uniqueConstraints = @UniqueConstraint(name = "uc_username", columnNames = {"username"})
 )
+@Where(clause = "deleted='false'")
+@AllArgsConstructor
 public class DriverDO
 {
 
     @Id
-    @GeneratedValue
     private Long id;
 
     @Column(nullable = false)
@@ -54,7 +58,7 @@ public class DriverDO
     private OnlineStatus onlineStatus;
 
 
-    private DriverDO()
+    public DriverDO()
     {
     }
 

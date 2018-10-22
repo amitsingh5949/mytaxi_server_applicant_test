@@ -16,7 +16,7 @@ You should be aware of the following conventions while you are working on this e
 
  * All new entities should have an ID with type of Long and a date_created with type of ZonedDateTime.
  * The architecture of the web service is built with the following components:
- 	* DataTransferObjects: Objects which are used for outside communication via the API
+   * DataTransferObjects: Objects which are used for outside communication via the API
    * Controller: Implements the processing logic of the web service, parsing of parameters and validation of in- and outputs.
    * Service: Implements the business logic and handles the access to the DataAccessObjects.
    * DataAccessObjects: Interface for the database. Inserts, updates, deletes and reads objects from the database.

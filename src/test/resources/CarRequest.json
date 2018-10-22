@@ -1,0 +1,15 @@
+{
+  "deleted": false,
+  "license_plate": "ERH8500",
+  "seat_count": 4,
+  "convertible": true,
+  "rating": 4.5,
+  "engine_type": "GAS",
+  "km_driven": 123400,
+  "top_speed": 120,
+  "manufacturer": {
+    "name": "audi",
+    "location": "berlin",
+    "contactEmail": "audi.berlin@support.audi.com"
+  }
+}
